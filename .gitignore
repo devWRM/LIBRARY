@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# I added .eslintcache per =>>  https://stackoverflow.com/questions/65079558/how-to-delete-eslintcache-file-in-react
+/frontend-library/.eslintcache
+
+
 # Ignore bundler config.
 /backend-library/.bundle
 
