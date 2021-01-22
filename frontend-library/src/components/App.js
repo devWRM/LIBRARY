@@ -1,29 +1,27 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+
+  
 
 
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          App.js file
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
+  render() {
+      return (
+        <div className="App">
+
+          <header className="App-header">
+            <p>
+              App.js file Header
+            </p>          
+          </header>
 
 
-    </div>
-  );
+Put my app content here
+        </div>
+      );
+  }
+
 }
 
 export default App;
