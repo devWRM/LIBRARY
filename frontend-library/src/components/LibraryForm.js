@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
+
+import { newLibrary } from '../actions/libraryActions.js';
 
 
 
@@ -18,6 +21,20 @@ class LibraryForm extends Component {
             [e.target.name]: e.target.value
         })
     }
+
+
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.newLibrary(this.state)
+
+        this.setState({
+            name: "",
+            street: "",
+            city: "",
+            state: ""
+        })
+    }
+
 
 
     render() {
@@ -51,4 +68,4 @@ class LibraryForm extends Component {
 }
 
 
-export default LibraryForm;
+export default connect(null, { newLibrary })(LibraryForm);
