@@ -1,5 +1,11 @@
 import React from 'react';
 import './App.css';
+import LibraryContainer from './libraryComponents/LibraryContainer';
+
+
+
+
+
 
 class App extends React.Component {
 
@@ -10,11 +16,12 @@ class App extends React.Component {
           <header className="App-header">
             <p>
               App.js file Header
+             
             </p>          
           </header>
 
+          <LibraryContainer />
 
-Put my app content here
         </div>
       );
   }
