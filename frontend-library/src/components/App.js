@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-import LibraryContainer from './libraryComponents/LibraryContainer';
 
+import './App.css';
 
 
 
@@ -20,7 +19,7 @@ class App extends React.Component {
             </p>          
           </header>
 
-          <LibraryContainer />
+          put container here
 
         </div>
       );
