@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
+import Library from './Library.js';
+
 
 function LibraryList(props) {
 
