@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 import Library from './Library.js';
+import { deleteLibrary } from '../actions/libraryActions.js';
 
 
 function LibraryList(props) {
@@ -12,12 +13,13 @@ function LibraryList(props) {
         <div>
             THE LIBRARY LIST:<br></br>
             click a name to see library details<br></br>
-            {props.libraries.map(library => <li key={library.id}>
-                {library.name}<br></br>
-                {library.street}<br></br>
-                {library.city}<br></br>
-                {library.state}<br></br>
-            </li>)}
+            {props.libraries.map(library => <div key={library.id}>
+                
+                <Library library={library} />
+                <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button><br></br>
+                - - -
+                
+            </div>)}
             
         </div>
     )
@@ -27,4 +29,10 @@ const mapStateToProps = state => {
     return { libraries: state.libraries }
 }
 
-export default connect(mapStateToProps)(LibraryList)
+const mapDispatchToProps = dispatch => {
+    return {
+        deleteLibrary: id => dispatch(deleteLibrary(id))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LibraryList)
