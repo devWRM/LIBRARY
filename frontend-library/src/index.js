@@ -10,7 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import './index.css';
 import App from './components/App';
-import rootReducer from './reducers/rootReducer';
+import { rootReducer } from './reducers/rootReducer';
 
 
 const store = createStore(
