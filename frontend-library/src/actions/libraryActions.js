@@ -17,14 +17,14 @@ export const newLibrary = libraryInput => {
             headers: { 'Content-Type': 'application/json'}
         })
         .then(resp => resp.json())
-        .then(dataLibrary => console.log(dataLibrary))
-        // .then(dataLibrary => dispatch({ type: 'NEW_LIBRARY', payload: dataLibrary }))
+        .then(dataLibrary => dispatch({ type: 'NEW_LIBRARY', payload: dataLibrary }))
 
     }
 
 }
 
 
+//         .then(dataLibrary => console.log(dataLibrary))
 
 
 
