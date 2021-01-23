@@ -1,3 +1,8 @@
 export const librariesReducer = (state = [], action) => {
-    return state
+    switch(action.type) {
+        case 'FETCH_LIBRARIES':
+            return action.payload
+        default:
+            return state
+    }
 }
