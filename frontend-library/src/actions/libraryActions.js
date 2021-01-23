@@ -22,11 +22,22 @@ export const newLibrary = libraryInput => {
     }
 
 }
-
-
 //         .then(dataLibrary => console.log(dataLibrary))
 
 
 
 
+export const deleteLibrary = libraryID => {
 
+    return (dispatch) => {
+        fetch(`http://localhost:3000/libraries/${libraryID}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(resp => resp.json())
+        .then(dataLibrary => console.log(dataLibrary))
+
+    }
+}
