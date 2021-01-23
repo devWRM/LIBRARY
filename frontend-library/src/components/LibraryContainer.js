@@ -6,6 +6,10 @@ import { fetchLibraries } from '../actions/libraryActions.js';
 
 class LibraryContainer extends Component {
 
+    componentDidMount() {
+        this.props.fetchLibraries()
+    }
+
     render() {
 
         return (
