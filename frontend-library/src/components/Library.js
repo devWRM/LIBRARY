@@ -3,6 +3,7 @@ import React from 'react'
 import BookContainer from './BookContainer.js';
 
 const Library = (props) => {
+
     return (
         <div>
             <b>{props.library.name}</b><br></br>
@@ -10,7 +11,7 @@ const Library = (props) => {
             {props.library.city}<br></br>
             {props.library.state}<br></br>
 
-            <BookContainer />
+            <BookContainer library={props.library} />
         </div>
     )
 }
