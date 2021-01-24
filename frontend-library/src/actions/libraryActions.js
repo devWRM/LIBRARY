@@ -49,6 +49,17 @@ export const newBook = (book, libraryID) => {
 }
 
 
+export const deleteBook = (id, libraryID) => {
+
+    return (dispatch) => {
+
+
+
+    }
+}
+
+
+
 
 
 
