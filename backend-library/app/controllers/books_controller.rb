@@ -18,12 +18,13 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
-  binding.pry
+  
     # @book = Book.new(book_params)
     @book = @library.books.new(book_params)
 
     if @book.save
-      render json: @book, status: :created, location: @book
+      # render json: @book, status: :created, location: @book
+      render json: @library
     else
       render json: @book.errors, status: :unprocessable_entity
     end
