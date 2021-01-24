@@ -54,16 +54,14 @@ export const deleteBook = (bookID, libraryID) => {
     return (dispatch) => {
         fetch(`http://localhost:3000/libraries/${libraryID}/books/${bookID}`, {
             method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' }
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
         .then(resp => resp.json())
-        .then(dataLibrary => console.log(dataLibrary))
-
+        .then(dataLibrary => dispatch({ type: "DELETE_WORD", payload: dataLibrary }))
     }
 }
-
-
-
 
 
 
