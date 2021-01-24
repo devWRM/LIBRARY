@@ -5,11 +5,11 @@ import BookList from './BookList.js';
 
 class BookContainer extends Component {
     // this.props.library
-debugger;
+
     render() {
         return (
             <div>
-                All your books listed!
+                {this.props.library.name} Library's Booklist:
                 <BookList booklist={this.props.library.books} />
             </div>
         )

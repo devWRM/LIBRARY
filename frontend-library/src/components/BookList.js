@@ -1,11 +1,22 @@
 import React from 'react'
 
-const BookList = () => {
+const BookList = (props) => {
+
     return (
         <div>
-            books<br></br>
-            books<br></br>
-            Books
+
+            {props.booklist.map(book => 
+                <div key={book.id}>
+                    {book.title}<br></br>
+                    {book.author}<br></br>
+                    {book.genre}<br></br>
+                    {book.summary}<br></br>
+
+                </div>
+                
+            )}
+
+            
         </div>
     )
 }
