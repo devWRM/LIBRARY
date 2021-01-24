@@ -24,6 +24,7 @@ class BooksController < ApplicationController
 
     if @book.save
       # render json: @book, status: :created, location: @book
+      # returning @library    NOT @book
       render json: @library
     else
       render json: @book.errors, status: :unprocessable_entity
@@ -41,12 +42,12 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
-  binding.pry
+  
     @book = Book.find(params[:id])
     @book.destroy
 
-    # ?? @library ??
-    render json: @book
+    # returning @library    NOT @book
+    render json: @library
   end
 
   private
