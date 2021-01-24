@@ -49,10 +49,10 @@ export const newBook = (book, libraryID) => {
 }
 
 
-export const deleteBook = (id, libraryID) => {
+export const deleteBook = (bookID, libraryID) => {
 
     return (dispatch) => {
-
+        fetch()
 
 
     }
