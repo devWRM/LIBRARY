@@ -35,8 +35,8 @@ class LibrariesController < ApplicationController
 
   # DELETE /libraries/1
   def destroy
-  binding.pry
     @library.destroy
+    render json: @library
   end
 
   private
