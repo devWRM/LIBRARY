@@ -9,6 +9,15 @@ import { deleteBook } from '../actions/libraryActions.js';
 
 const BookList = (props) => {
 
+    // NOTE Need handleDelete to access props ??
+    let handleDelete = (book) => {
+        props.deleteBook(book.id, book.library_id)
+    }
+
+
+
+
+
     return (
         <div>
             
@@ -27,7 +36,7 @@ const BookList = (props) => {
                 <li key={book.id}>  
                     <Book book={book} /> 
 
-                    <button onClick={() => props.deleteBook(book.id, book.library_id)}>Delete {book.title}</button>
+                    <button onClick={() => handleDelete(book)}>Delete {book.title}</button>
 
                 </li>) : <h4>There are no books in this library</h4>
             }
@@ -38,13 +47,11 @@ const BookList = (props) => {
 }
 
 
-let mapDispatchToProps = dispatch => {
-
-    return ({
-        deleteBook: (bookID, libraryID) => deleteBook(bookID, libraryID)
-    })
-
-}
+// let mapDispatchToProps = dispatch => {
+//     return ({
+//         deleteBook: (bookID, libraryID) => deleteBook(bookID, libraryID)
+//     })
+// }
 
 
-export default connect(null, mapDispatchToProps)(BookList)
+export default connect(null, { deleteBook })(BookList)
