@@ -1,4 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+
+
+import { newBook } from '../actions/libraryActions.js';
+
+
+
 
 class BookForm extends Component {
 
@@ -19,12 +26,26 @@ class BookForm extends Component {
     }
 
 
+    handleSubmit = e => {
+        e.preventDefault()
+
+        // this.state =>> book (input info)
+        this.props.newBook(this.state, this.props.library.id)
+        this.setState({
+            title: "",
+            author: "",
+            genre: "",
+            summary: ""
+        })
+    }
+
+
 
     render() {
         return (
             <div>
                 
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Title</label>
                     <input type="text" value={this.state.title } onChange={this.handleChange} name="title"></input>
 
@@ -46,4 +67,4 @@ class BookForm extends Component {
     }
 }
 
-export default BookForm
+export default connect(null, { newBook })(BookForm);

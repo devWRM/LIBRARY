@@ -1,5 +1,4 @@
 export const fetchLibraries = () => {
-
     return (dispatch) => {
         fetch('http://localhost:3000/libraries')
         .then(resp => resp.json())
@@ -18,17 +17,12 @@ export const newLibrary = libraryInput => {
         })
         .then(resp => resp.json())
         .then(dataLibrary => dispatch({ type: 'NEW_LIBRARY', payload: dataLibrary }))
-
     }
-
 }
 //         .then(dataLibrary => console.log(dataLibrary))
 
 
-
-
 export const deleteLibrary = libraryID => {
-
     return (dispatch) => {
         fetch(`http://localhost:3000/libraries/${libraryID}`, {
             method: 'DELETE',
@@ -38,6 +32,23 @@ export const deleteLibrary = libraryID => {
         })
         .then(resp => resp.json())
         .then(dataLibrary => dispatch({ type: 'DELETE_LIBRARY', payload: dataLibrary }))
-
     }
 }
+
+
+export const newBook = (book, libraryID) => {
+    return (dispatch) => { 
+        fetch(`http://localhost:3000/libraries/${libraryID}/books`, {
+            method: 'POST',
+            body: JSON.stringify(book),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(resp => resp.json())
+        .then(dataLibrary => dispatch({ type: 'NEW_BOOK', payload: dataLibrary}))
+    }
+}
+
+
+
+
+
