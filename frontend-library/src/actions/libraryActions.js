@@ -52,8 +52,12 @@ export const newBook = (book, libraryID) => {
 export const deleteBook = (bookID, libraryID) => {
 
     return (dispatch) => {
-        fetch()
-
+        fetch(`http://localhost:3000/libraries/${libraryID}/books/${bookID}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(resp => resp.json())
+        .then(dataLibrary => console.log(dataLibrary))
 
     }
 }
