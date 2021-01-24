@@ -37,7 +37,7 @@ export const deleteLibrary = libraryID => {
             }
         })
         .then(resp => resp.json())
-        .then(dataLibrary => console.log(dataLibrary))
+        .then(dataLibrary => dispatch({ type: 'DELETE_LIBRARY', payload: dataLibrary }))
 
     }
 }
