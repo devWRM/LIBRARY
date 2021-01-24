@@ -1,20 +1,31 @@
 import React from 'react'
 
+
+import Book from './Book.js';
+
+
+
 const BookList = (props) => {
 
     return (
         <div>
-
-            {props.booklist.map(book => 
+            
+            {/* {props.booklist && props.booklist.map(book => 
                 <div key={book.id}>
-                    {book.title}<br></br>
-                    {book.author}<br></br>
-                    {book.genre}<br></br>
-                    {book.summary}<br></br>
+                    
+                    <Book book={book} />
 
-                </div>
-                
-            )}
+                </div>              
+            )} */}
+
+
+
+
+            {props.booklist.length ? props.booklist.map(book => 
+                <li key={book.id}>  
+                    <Book book={book} />  
+                </li>) : <h4>There are no books in this library</h4>
+            }
 
             
         </div>
