@@ -13,13 +13,24 @@ function LibraryList(props) {
         <div>
             THE LIBRARY LIST:<br></br>
             click a name to see library details<br></br>
-            {props.libraries.map(library => <div key={library.id}>
+            {/* {props.libraries.map(library => <div key={library.id}>
                 
                 <Library library={library} />
                 <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button><br></br>
                 - - -
                 
-            </div>)}
+            </div>)} */}
+
+
+            {props.libraries.length ? props.libraries.map(library => 
+                <div key={library.id}>
+                    <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
+                    <Library library={library} />  <br></br>  
+                </div>) : <h3> Start by creating a library</h3>
+            }
+
+
+
             
         </div>
     )
