@@ -41,6 +41,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
+  binding.pry
     @book = Book.find(params[:id])
     @book.destroy
 
