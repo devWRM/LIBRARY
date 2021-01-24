@@ -18,6 +18,7 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
+  binding.pry
     # @book = Book.new(book_params)
     @book = @library.books.new(book_params)
 
