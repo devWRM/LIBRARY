@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
 
 import Book from './Book.js';
+import { deleteBook } from '../actions/libraryActions.js';
 
 
 
@@ -23,7 +25,10 @@ const BookList = (props) => {
 
             {props.booklist.length ? props.booklist.map(book => 
                 <li key={book.id}>  
-                    <Book book={book} />  
+                    <Book book={book} /> 
+
+                    <button onClick={() => props.deleteBook(book.id, book.library_id)}>Delete {book.title}</button>
+
                 </li>) : <h4>There are no books in this library</h4>
             }
 
@@ -32,4 +37,14 @@ const BookList = (props) => {
     )
 }
 
-export default BookList
+
+let mapDispatchToProps = dispatch => {
+
+    return ({
+        deleteBook: (id, library_id) => deleteBook(id, library_id)
+    })
+
+}
+
+
+export default connect(null, mapDispatchToProps)(BookList)
