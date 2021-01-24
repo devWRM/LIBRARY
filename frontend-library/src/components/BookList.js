@@ -41,7 +41,7 @@ const BookList = (props) => {
 let mapDispatchToProps = dispatch => {
 
     return ({
-        deleteBook: (id, library_id) => deleteBook(id, library_id)
+        deleteBook: (bookID, libraryID) => deleteBook(bookID, libraryID)
     })
 
 }
