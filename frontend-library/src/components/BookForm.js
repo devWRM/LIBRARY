@@ -10,6 +10,11 @@ class BookForm extends Component {
     }
 
 
+    handleChange = e => {
+
+    }
+
+
 
     render() {
         return (
@@ -17,8 +22,18 @@ class BookForm extends Component {
                 
                 <form>
                     <label>Title</label>
-                    <input type="text" value={this.state.title }></input>
+                    <input type="text" value={this.state.title } onChange={this.handleChange} name="title"></input>
 
+                    <label>Author</label>
+                    <input type="text" value={this.state.author } onChange={this.handleChange} name="author"></input>
+
+                    <label>Genre</label>
+                    <input type="text" value={this.state.genre } onChange={this.handleChange} name="genre"></input>
+
+                    <label>Summary</label>
+                    <input type="text" value={this.state.summary } onChange={this.handleChange} name="summary"></input>
+
+                    <input type="submit" value="donate book"></input>
 
                 </form>
                 
