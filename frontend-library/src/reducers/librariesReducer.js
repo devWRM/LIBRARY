@@ -17,6 +17,15 @@ export const librariesReducer = (state = [], action) => {
                 }
             })
             return librariesNewBook
+        case 'DELETE_BOOK':    
+            let librariesDeleteBook = state.map(library => {
+                if (library.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return library
+                }
+            })            
+            return librariesDeleteBook            
         default:
             return state
     }
