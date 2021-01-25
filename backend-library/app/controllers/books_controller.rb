@@ -50,7 +50,7 @@ class BooksController < ApplicationController
     @book.destroy
 
     # returning @library    NOT @book
-    render json: library
+    render json: @library
     
   end
 
