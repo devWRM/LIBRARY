@@ -1,5 +1,5 @@
 export const librariesReducer = (state = [], action) => {
-
+// debugger;
     switch(action.type) {
         case 'FETCH_LIBRARIES':
             return action.payload
@@ -17,15 +17,15 @@ export const librariesReducer = (state = [], action) => {
                 }
             })
             return librariesNewBook
-        case 'DELETE_BOOK':    
+        case 'DELETE_BOOK':
             let librariesDeleteBook = state.map(library => {
                 if (library.id === action.payload.id) {
                     return action.payload
                 } else {
                     return library
                 }
-            })            
-            return librariesDeleteBook            
+            })
+            return librariesDeleteBook         
         default:
             return state
     }
