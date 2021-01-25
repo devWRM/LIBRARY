@@ -59,7 +59,7 @@ export const deleteBook = (bookID, libraryID) => {
             }
         })
         .then(resp => resp.json())
-        .then(dataLibrary => dispatch({ type: "DELETE_WORD", payload: dataLibrary }))
+        .then(dataLibrary => dispatch({ type: "DELETE_BOOK", payload: dataLibrary }))
     }
 }
 
