@@ -44,10 +44,13 @@ class BooksController < ApplicationController
   def destroy
 
     @book = Book.find(params[:id])
+    # Library.find(params[:library_id])
+    # library = Library.find(@book.library_id)
+
     @book.destroy
 
     # returning @library    NOT @book
-    render json: @library
+    render json: library
     
   end
 
