@@ -42,12 +42,13 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
-  
+
     @book = Book.find(params[:id])
     @book.destroy
 
     # returning @library    NOT @book
     render json: @library
+    
   end
 
   private
