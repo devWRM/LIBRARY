@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './App.css';
-import './LibraryContainer.js';
 import LibraryContainer from './LibraryContainer.js';
 
 
