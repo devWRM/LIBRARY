@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import Library from './Library.js';
 import { deleteLibrary } from '../actions/libraryActions.js';
+import Library from './Library.js';
+import LibraryForm from './LibraryForm.js';
 
 
 function LibraryList(props) {
@@ -12,7 +13,10 @@ function LibraryList(props) {
     return (
         <div>
             THE LIBRARY LIST:<br></br>
-            click a name to see library details<br></br>
+            -- Fill in the form and submit to add a library to the list.<br></br>
+            -- Click a library name to see library details.<br></br>
+
+            <LibraryForm />
             {/* {props.libraries.map(library => <div key={library.id}>
                 
                 <Library library={library} />
