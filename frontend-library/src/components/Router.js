@@ -8,9 +8,14 @@ import LibraryContainer from './LibraryContainer.js';
 
 const Router = () => {
     return (
-        <div>
-            
-        </div>
+        // <div>
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/libraries/new' component={LibraryForm} />
+                
+
+            </Switch>
+        // </div>
     )
 }
 
