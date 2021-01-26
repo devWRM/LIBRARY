@@ -14,8 +14,8 @@ class App extends React.Component {
 
           <header className="App-header">
             <p>
-              App.js file Header
-             
+              <h3>Welcome to the Library App</h3>
+             <p> LINK LINK LINK LINK</p>
             </p>          
           </header>
 
