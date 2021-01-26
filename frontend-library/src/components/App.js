@@ -14,8 +14,8 @@ class App extends React.Component {
 
           <header className="App-header">
             <p>
-              <h3>Welcome to the Library App</h3>
-             <p> LINK LINK LINK LINK</p>
+              <h3>LIBRARY APP</h3>
+             <p> (Home)	(List All Libraries)	(Enter New Library)</p>
             </p>          
           </header>
 
