@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 
 import { fetchLibraries } from '../actions/libraryActions.js';
-import LibraryForm from './LibraryForm.js';
+// import LibraryForm from './LibraryForm.js';
 import LibraryList from './LibraryList.js';
 
 class LibraryContainer extends Component {
@@ -17,7 +17,7 @@ class LibraryContainer extends Component {
         return (
             <div>
                 LIBRARY CONTAINER
-                <LibraryForm />
+                {/* <LibraryForm /> */}
                 <LibraryList />
             </div>
         )
