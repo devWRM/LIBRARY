@@ -1,22 +1,22 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+// import React from 'react';
+// import { Switch, Route } from 'react-router-dom';
 
 
-import Home from './Home.js';
-import LibraryContainer from './LibraryContainer.js';
+// import Home from './Home.js';
+// import LibraryContainer from './LibraryContainer.js';
 
 
-const Router = () => {
-    return (
-        // <div>
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/libraries/new' component={LibraryForm} />
+// const Router = () => {
+//     return (
+//         // <div>
+//             <Switch>
+//                 <Route exact path='/' component={Home} />
+//                 <Route path='/libraries/new' component={LibraryForm} />
                 
 
-            </Switch>
-        // </div>
-    )
-}
+//             </Switch>
+//         // </div>
+//     )
+// }
 
-export default Router
+// export default Router
