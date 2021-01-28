@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { deleteLibrary } from '../actions/libraryActions.js';
-import Library from './Library.js';
+// import Library from './Library.js';
 import LibraryForm from './LibraryForm.js';
 
 
@@ -40,7 +41,7 @@ function LibraryList(props) {
 
                 >
                     <button className="library-button" onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
-                    <b>{library.name}</b>
+                    <Link to={`/libraries/${library.id}`}>{library.name}</Link>
 
                     {/* <Library library={library} />  <br></br>   */}
                 </div>) : <h3> Start by creating a library</h3>
