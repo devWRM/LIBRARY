@@ -1,6 +1,86 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
+
+Link {
+  background: white;
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.navbar-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  list-style: none;
+  color: red;
+}
+
+.navbar-links:active {
+  color: yellow;
+}
+
+
+nav {
+  background-color: #ADB9DF;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  
+  /* flex-direction: column; */
+  /* font-size: calc(10px + 2vmin); */
+  /* justify-content: center; */
+}
+
+
+
+
+/* p {
+  color: rgb(9, 245, 135);
+  font-size: 25px;
+
+} */
+
+#main {
+  color: black;
+  /* float: right; */
+
+}
+
+#library {
+  color: teal;
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .App-logo {
   height: 40vmin;
@@ -12,17 +92,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 } */
-
-.App-header {
-  background-color: #282c34;
-  min-height: 25vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 /* .App-link {
   color: #61dafb;

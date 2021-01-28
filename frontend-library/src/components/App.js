@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import './App.css';
+import Navbar from './Navbar.js';
 import LibraryContainer from './LibraryContainer.js';
 
 
@@ -16,12 +16,16 @@ class App extends React.Component {
           <header className="App-header">
             <p>
               <h3>LIBRARY APP</h3>
-             <Link to="/">Home</Link>	<Link to="/about">About</Link> <Link to="/libraries">List All Libraries</Link>
+             {/* <Link to="/">Home</Link>	<Link to="/about">About</Link> <Link to="/libraries">List All Libraries</Link> */}
+            
+           
             </p>          
           </header>
 
+          <Navbar />
+
           <div id="main">
-          <LibraryContainer />
+            <LibraryContainer />
           </div>
 
         </div>
