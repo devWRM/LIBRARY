@@ -39,8 +39,10 @@ function LibraryList(props) {
                     }}
 
                 >
-                    <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
-                    <Library library={library} />  <br></br>  
+                    <button className="library-button" onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
+                    <b>{library.name}</b>
+
+                    {/* <Library library={library} />  <br></br>   */}
                 </div>) : <h3> Start by creating a library</h3>
             }
 
