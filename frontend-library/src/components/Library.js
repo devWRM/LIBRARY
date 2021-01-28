@@ -1,9 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux';
+
 
 // import BookContainer from './BookContainer.js';
 
 const Library = (props) => {
-    // ID # of the Library name clicked =>>     props.match.params.id
+    // ID # of the Library name clicked             =>> props.match.params.id
+    // Array of Library objects in the Redux Store  =>> props.libraries
+    // ID # of the 1st Library in the Redux Store   =>> props.libraries[0].id
+
 
     return (
         <div>
@@ -18,4 +23,11 @@ const Library = (props) => {
     )
 }
 
-export default Library;
+
+
+const mapStateToProps = state => {
+    return { libraries: state.libraries }
+}
+
+
+export default connect(mapStateToProps)(Library);
