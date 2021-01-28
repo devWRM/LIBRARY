@@ -39,7 +39,25 @@ class LibraryForm extends Component {
 
     render() {
         return (
-            <div>
+            <div
+            
+                style = {{
+                    // width: '50%',
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    alignItems: 'center',
+                    // fontSize: 20px,
+                    
+                    // border: '2px solid #ccc',
+                    padding: '1rem'
+                }}
+            
+            >
+
+            THE LIBRARY LIST:<br></br>
+            ▸ Fill in the form and submit to add a library to the list.<br></br>
+            ▸ Click a library name to see library details.<br></br>
+
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Name: </label>
