@@ -54,7 +54,7 @@ class LibraryForm extends Component {
             
             >
 
-            THE LIBRARY LIST:<br></br>
+            
             ▸ Fill in the form and submit to add a library to the list.<br></br>
             ▸ Click a library name to see library details.<br></br>
 

@@ -20,7 +20,21 @@ class LibraryContainer extends Component {
 
         return (
             <div>
-                LIBRARY CONTAINER
+                <div 
+                    style = {{
+                        // width: '50%',
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        alignItems: 'center',
+                        fontSize: '20px',
+                        
+                        // border: '2px solid #ccc',
+                        padding: '1rem'
+                    }}
+                >
+                    THE LIBRARY LIST:
+                    
+                </div>
                 {/* <LibraryForm /> */}
 
                 <Switch>
