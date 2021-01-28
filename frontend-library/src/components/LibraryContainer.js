@@ -8,6 +8,7 @@ import { fetchLibraries } from '../actions/libraryActions.js';
 import LibraryList from './LibraryList.js';
 import Home from './Home.js';
 import About from './About.js';
+import Library from './Library.js';
 
 
 class LibraryContainer extends Component {
@@ -39,8 +40,9 @@ class LibraryContainer extends Component {
 
                 <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route exact path='/about' component={About} />
+                    <Route path='/about' component={About} />
                     <Route exact path='/libraries' component={LibraryList} />
+                    <Route path='/libraries/:id' component={Library} />
                 </Switch>
 
 
