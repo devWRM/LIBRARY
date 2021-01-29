@@ -13,18 +13,14 @@ function LibraryList(props) {
 
     return (
         <div>
-            {/* THE LIBRARY LIST:<br></br>
-            ▸ Fill in the form and submit to add a library to the list.<br></br>
-            ▸ Click a library name to see library details.<br></br> */}
-
+  
             <LibraryForm />
 
             {/* {props.libraries.map(library => <div key={library.id}>
                 
                 <Library library={library} />
-                <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button><br></br>
-                - - -
-                
+                <button onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
+               
             </div>)} */}
 
 
@@ -32,9 +28,6 @@ function LibraryList(props) {
                 <div key={library.id}
                 
                     style = {{
-                        // width:'90%',
-                        // maxWidth: '40rem',
-                        // margin: '2rem auto',
                         border: '2px solid #ccc',
                         padding: '1rem'
                     }}
