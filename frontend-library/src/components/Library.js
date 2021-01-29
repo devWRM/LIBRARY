@@ -24,11 +24,22 @@ const Library = (props) => {
             <BookContainer library={props.library} /> */}
 
              
-
-            {libby.name}<br></br>
-            {libby.street}<br></br>
-            {libby.city}<br></br>
-            {libby.state}
+            <div
+            
+            style = {{
+                justifyContent: 'left',
+                fontSize: '20px',
+                
+                // border: '2px solid #ccc',
+                padding: '1rem'
+            }}
+            
+            >
+                <b>{libby.name}</b><br></br>
+                Address: {libby.street}<br></br>
+                City: {libby.city}<br></br>
+                State: {libby.state}
+            </div>
 
             <BookContainer library={libby} />
             {/* <BookContainer library={props.library} /> */}
