@@ -33,7 +33,6 @@ class LibraryContainer extends Component {
                         padding: '1rem'
                     }}
                 >
-                    THE LIBRARY LIST:
                     
                 </div>
                 {/* <LibraryForm /> */}
