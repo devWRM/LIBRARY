@@ -9,7 +9,7 @@ const About = () => {
         }}
         
         >
-            <h3>ALL ABOUT LIBRARY APP!</h3>
+            <h3>ALL ABOUT LIBRARY APP</h3>
             <h4>Library App lets you:</h4>
             <ul>
                 <li>see a list of libraries</li>
