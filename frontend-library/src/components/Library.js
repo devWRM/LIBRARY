@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 
-// import BookContainer from './BookContainer.js';
+import BookContainer from './BookContainer.js';
 
 const Library = (props) => {
     // ID # of the Library name clicked             =>> props.match.params.id   ("7")
@@ -30,8 +30,8 @@ const Library = (props) => {
             {libby.city}<br></br>
             {libby.state}
 
-            
-
+            <BookContainer library={libby} />
+            {/* <BookContainer library={props.library} /> */}
 
         </div>
     )
