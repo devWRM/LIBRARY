@@ -43,7 +43,17 @@ class BookForm extends Component {
 
     render() {
         return (
-            <div>
+            <div
+            
+            style = {{
+                justifyContent: 'left',
+                fontSize: '20px',
+                
+                // border: '2px solid #ccc',
+                padding: '1rem'
+            }}
+            
+            >
                 
                 <form onSubmit={this.handleSubmit}>
                     <label>Title</label>
@@ -52,13 +62,17 @@ class BookForm extends Component {
                     <label>Author</label>
                     <input type="text" value={this.state.author } onChange={this.handleChange} name="author"></input>
 
+                    <br></br>
+
                     <label>Genre</label>
                     <input type="text" value={this.state.genre } onChange={this.handleChange} name="genre"></input>
 
                     <label>Summary</label>
                     <input type="text" value={this.state.summary } onChange={this.handleChange} name="summary"></input>
 
-                    <input type="submit" value="donate book"></input>
+                    <br></br>
+
+                    <input type="submit" value="create book"></input>
 
                 </form>
                 
