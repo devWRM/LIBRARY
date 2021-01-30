@@ -14,8 +14,14 @@ class BookContainer extends Component {
                 
                 <BookForm library={this.props.library} />
 
-                {this.props.library.name} Library's Booklist:
+                <b>{this.props.library.name} Library's Booklist:</b>
+
+
+                
                 <BookList booklist={this.props.library.books} />
+
+
+
             </div>
         )
     }
