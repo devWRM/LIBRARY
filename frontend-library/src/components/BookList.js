@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
-// import Book from './Book.js';
+import Book from './Book.js';
 import { deleteBook } from '../actions/libraryActions.js';
-
 
 
 const BookList = (props) => {
@@ -13,9 +11,6 @@ const BookList = (props) => {
     let handleDelete = (book) => {
         props.deleteBook(book.id, book.library_id)
     }
-
-
-
 
 
     return (
@@ -30,26 +25,20 @@ const BookList = (props) => {
             )}  */}
 
 
-
             {props.booklist.length ? props.booklist.map(book => 
                 <li key={book.id}>  
-                    {/* <Book book={book} />  */}
 
-
-                    {book.title}<br></br>
+                    <Book book={book} />
+                    {/* {book.title}<br></br>
                     {book.author}<br></br>
                     {book.genre}<br></br>
-                    {book.summary}<br></br>
-
+                    {book.summary}<br></br> */}
 
                     <button onClick={() => handleDelete(book)}>Delete {book.title}</button>
 
                 </li>) : <h4>There are no books in this library</h4>
             }
-
-
-
-            
+          
         </div>
     )
 }
