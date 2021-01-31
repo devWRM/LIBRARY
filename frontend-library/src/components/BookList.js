@@ -25,18 +25,19 @@ const BookList = (props) => {
             )}  */}
 
 
-            {props.booklist.length ? props.booklist.map(book => 
-                <li key={book.id}>  
+            {
+                props.booklist.length ? props.booklist.map(book => 
+                    <li key={book.id}>  
 
-                    <Book book={book} />
-                    {/* {book.title}<br></br>
-                    {book.author}<br></br>
-                    {book.genre}<br></br>
-                    {book.summary}<br></br> */}
+                        <Book book={book} />
+                        {/* {book.title}<br></br>
+                        {book.author}<br></br>
+                        {book.genre}<br></br>
+                        {book.summary}<br></br> */}
 
-                    <button onClick={() => handleDelete(book)}>Delete {book.title}</button>
+                        <button onClick={() => handleDelete(book)}>Delete {book.title}</button>
 
-                </li>) : <h4>There are no books in this library</h4>
+                    </li>) : <h4>There are no books in this library</h4>
             }
           
         </div>
