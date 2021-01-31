@@ -24,7 +24,7 @@ class BookContainer extends Component {
                 
                 <BookForm library={this.props.library} />
 
-                <b>{this.props.library.name} Library's Booklist:</b>
+                <div style = {{ color: "#229954", padding: '1rem' }}><b>{this.props.library.name} Library's Booklist:</b></div>
 
 
                 
