@@ -10,7 +10,17 @@ class BookContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div
+            
+            style = {{
+                justifyContent: 'left',
+                fontSize: '17px',
+                
+                // border: '2px solid #ccc',
+                padding: '1rem'
+            }}
+            
+            >
                 
                 <BookForm library={this.props.library} />
 
