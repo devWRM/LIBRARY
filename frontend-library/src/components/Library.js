@@ -36,7 +36,7 @@ const Library = (props) => {
             
             >
                 <b>{libby.name}</b><br></br>
-                Address: {libby.street}<br></br>
+                Street: {libby.street}<br></br>
                 City: {libby.city}<br></br>
                 State: {libby.state}
             </div>
