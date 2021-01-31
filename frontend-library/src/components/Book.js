@@ -4,10 +4,10 @@ const Book = (props) => {
 
     return (
         <div>
-            {props.book.title}<br></br>
-            {props.book.author}<br></br>
-            {props.book.genre}<br></br>
-            {props.book.summary}<br></br>
+            <b>Title:</b> {props.book.title}<br></br>
+            <b>Author:</b> {props.book.author}<br></br>
+            <b>Genre:</b> {props.book.genre}<br></br>
+            <b>Summary:</b> {props.book.summary}<br></br>
         </div>
     )
 }
