@@ -24,20 +24,21 @@ function LibraryList(props) {
             </div>)} */}
 
 
-            {props.libraries.length ? props.libraries.map(library => 
-                <div key={library.id}
-                
-                    style = {{
-                        border: '2px solid #ccc',
-                        padding: '1rem'
-                    }}
+            {
+                props.libraries.length ? props.libraries.map(library => 
+                    <div key={library.id}
+                    
+                        style = {{
+                            border: '2px solid #ccc',
+                            padding: '1rem'
+                        }}
 
-                >
-                    <button className="library-button" onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
-                    <Link to={`/libraries/${library.id}`}>{library.name}</Link>
+                    >
+                        <button className="library-button" onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
+                        <Link to={`/libraries/${library.id}`}>{library.name}</Link>
 
-                    {/* <Library library={library} />  <br></br>   */}
-                </div>) : <h3> Start by creating a library</h3>
+                        {/* <Library library={library} />  <br></br>   */}
+                    </div>) : <h3> Start by creating a library</h3>
             }
 
 
