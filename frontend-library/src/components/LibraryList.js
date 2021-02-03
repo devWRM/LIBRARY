@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 import { deleteLibrary } from '../actions/libraryActions.js';
 // import Library from './Library.js';
 import LibraryForm from './LibraryForm.js';
+import Like from './Like.js';
 
 
 function LibraryList(props) {
-
-    
 
     return (
         <div>
@@ -35,9 +34,11 @@ function LibraryList(props) {
 
                     >
                         <button className="library-button" onClick={() => props.deleteLibrary(library.id)}>Delete {library.name}</button>
-                        <Link to={`/libraries/${library.id}`}>{library.name}</Link>
+                        <Link to={`/libraries/${library.id}`} >{library.name} </Link>
 
-                        {/* <Library library={library} />  <br></br>   */}
+                        <span><Like /></span>
+    
+                        {/* <Library library={library} />  <br></br>   */} 
                     </div>) : <h3> Start by creating a library</h3>
             }
 
